@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import WalletGenerator from "@/components/WalletGenerator";
 
 export default function Home() {
