@@ -42,7 +42,7 @@ const Wallets = ({
         </div>
       </div>
       {wallets.map((wallet, index) => (
-        <div className="w-full max-w-full overflow-hidden bg-foreground/5 p-6 rounded-md my-4">
+        <div key={index} className="w-full max-w-full overflow-hidden bg-foreground/5 p-6 rounded-md my-4">
           <div className="flex justify-between items-center">
             <h2 className="scroll-m-20 text-3xl font-semibold tracking-tight first:mt-0 mb-2">
               Wallet {index + 1}
