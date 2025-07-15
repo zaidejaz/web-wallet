@@ -18,7 +18,7 @@ const Wallets = ({
 }: WalletProps) => {
   return (
     <div>
-      <div className="flex flex-col md:flex-row justify-between items-center">
+      <div className="flex flex-col space-y-2 md:space-y-0 md:flex-row justify-between items-center">
         <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight text-balance">
           Your Wallets
         </h1>
@@ -42,10 +42,7 @@ const Wallets = ({
         </div>
       </div>
       {wallets.map((wallet, index) => (
-        <div
-          key={index}
-          className="w-full bg-foreground/5 p-4 rounded-md my-4 p-6"
-        >
+        <div className="w-full max-w-full overflow-hidden bg-foreground/5 p-6 rounded-md my-4">
           <div className="flex justify-between items-center">
             <h2 className="scroll-m-20 text-3xl font-semibold tracking-tight first:mt-0 mb-2">
               Wallet {index + 1}
@@ -61,8 +58,8 @@ const Wallets = ({
             </Button>
           </div>
           <div className="space-y-4 w-full">
-            <div className="flex flex-col">
-              <span className="text-lg md:text-xl font-bold tracking-tighter">
+          <div className="flex flex-col min-w-0">
+          <span className="text-lg md:text-xl font-bold tracking-tighter">
                 Public Key
               </span>
               <p
@@ -72,8 +69,8 @@ const Wallets = ({
                 {wallet.publicKey}
               </p>
             </div>
-            <div className="flex flex-col">
-              <span className="text-lg md:text-xl font-bold tracking-tighter">
+            <div className="flex flex-col min-w-0">
+            <span className="text-lg md:text-xl font-bold tracking-tighter">
                 Private Key
               </span>
               <p

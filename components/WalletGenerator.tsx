@@ -66,14 +66,14 @@ const WalletGenerator = () => {
       <div className="max-w-7xl mx-auto">
         {wallets.length == 0 && (
           <div className="flex flex-col space-y-4">
-            <h1 className="scroll-m-20 text-6xl font-extrabold tracking-tight text-balance">
+            <h1 className="scroll-m-20 text-4xl md:text-6xl font-extrabold tracking-tight text-balance">
               Create a new Solana Wallet
             </h1>
             <Button className="w-45" onClick={generateWallet}>Generate Wallet</Button>
           </div>
         )}
         {wallets.length > 0 && (
-          <div className="">
+          <div>
             <Mnemonic mnemonics={mnemonics} />
             <Wallets
               wallets={wallets}
